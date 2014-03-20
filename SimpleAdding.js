@@ -14,7 +14,7 @@ function SimpleAdding(num) {
 }
 
 function SimpleAdding(num) {
-  if (num === 1){
+  if (num === 1){ß
     return 1;
   }
   return num + SimpleAdding(num-1);
