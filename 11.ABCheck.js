@@ -8,3 +8,6 @@ function ABCheck(str) {
   }
   return false;
 }
+
+
+// git commit deleted files
