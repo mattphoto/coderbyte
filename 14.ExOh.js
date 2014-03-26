@@ -10,3 +10,16 @@ function ExOh(str) {
   }
   return xcount === ocount;
 }
+
+
+function ExOh(str) { 
+  return str.replace(new RegExp("x","g"),"").length == str.replace(new RegExp("o","g"),"").length;
+}
+
+
+string ExOh(string str) { 
+  
+  return count(all(str), 'x') == count(all(str), 'o') ? "true" : "false"; 
+            
+}
+
