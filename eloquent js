@@ -1,0 +1,23 @@
+
+var arr = [[[1, [1.1]], 2, 3], [4, 5]];
+
+
+console.log(arr);
+flatarr = arr.concat();
+console.log(flatarr);
+
+
+
+function arraySum(arr) {
+    
+    
+    
+    
+    
+}
+
+
+
+// flatten([[[1, [1.1]], 2, 3], [4, 5]]);
+
+// merged = merged.concat.apply(merged, arrays);
