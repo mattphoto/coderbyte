@@ -28,3 +28,23 @@ function ThirdGreatest(strArr) {
   return strArr[w]; 
          
 }
+
+
+// ozkan
+
+function ThirdGreatest(strArr) { 
+
+  var lengths = [];
+  for (var i in strArr) {
+    lengths.push(strArr[i].length);
+  }
+  
+  var target = lengths.sort()[strArr.length-3];
+  
+  for (i in strArr) {
+    if (strArr[i].length === target) {
+      var res = strArr[i];
+    }
+  }
+  
+  return res; 
