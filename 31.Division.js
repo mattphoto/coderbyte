@@ -30,3 +30,40 @@ function Division(num1,num2) {
       }
   }
 }
+
+
+
+// marshall
+
+function Division(num1,num2) { 
+
+  // code goes here  
+  if (num1>num2) {
+    var big = num1;
+    var small = num2;
+  } else {
+    var big = num2;
+    var small = num1;
+  }
+  var max=1;
+  for (var x=1;x<big;x++) {
+    if (Math.round(big/x)==(big/x)) {
+      if (Math.round(small/x)==(small/x)) {
+        max = x;
+      }
+    }
+  }
+  return max; 
+         
+}
+
+
+
+/// superdewd
+
+function Division(num1,num2) { 
+
+  var gcd = function (a, b) {
+    return b == 0 ? a : gcd(b, a % b);
+  };
+}

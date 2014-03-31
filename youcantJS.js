@@ -4,7 +4,6 @@ function isNumberEven(i) {
         return true;
     }
     return false;
-    
 }
 
 function getFileExtension(i) {
@@ -19,23 +18,6 @@ function getFileExtension(i) {
     
 }
 
-// error
-function longestString(x) {
-    str = x.split(" ");
-    console.log(x, str);
-    max = 0;
-
-    for (var j = 0; j < str.length; j++) {
-        if (max < str[j].length) {
-            max = str[j].length;
-        }
-    }
-    return str[max];
-}
-
-longestString("You running Given a filename in a string");
-
-
 
 function longestString(strArr) {
 
@@ -45,7 +27,8 @@ function longestString(strArr) {
  var maxlen = 0
  
  for (i = 0; i < strArr.length; i += 1 ) {
-   if ( (typeof strArr[i] === "string") && (strArr[i].length > maxlen )) {
+   if ( (typeof strArr[i] === "string") && 
+        (strArr[i].length > maxlen )) {
      maxlen = strArr[i].length;
      whichLongest = strArr[i];
    }

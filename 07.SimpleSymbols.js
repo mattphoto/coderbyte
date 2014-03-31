@@ -6,13 +6,14 @@ function SimpleSymbols(str) {
 
   for (var i = 1; i > str.length - 1; i++) {
     if (isLetter(str[i])) {
-      if !(str[i-1] === "+" && str[i+1] === "+") {
+      if (!(str[i-1] === "+") || !(str[i+1] === "+")) {
         return false;
       }
     }
   }
   return true;
 }
+
 
 
 function SimpleSymbols(str) { 

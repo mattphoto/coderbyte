@@ -26,7 +26,7 @@ var commaAdded = [];
 
   for (var i= number.length-1; i >= 0; i--) {
     console.log(i, commaAdded.length, commaAdded.length % 4, commaAdded.join(""));
-    if (commaAdded.length % 4 === 0 && commaAdded.length !== 0){
+    if (commaAdded.length % 4 === 0 && commaAdded !== undefined){
       commaAdded.unshift(",");
     }
     commaAdded.unshift(number[i]);
