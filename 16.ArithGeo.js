@@ -30,7 +30,7 @@ function ArithGeo(arr) {
   
   var ar = arr[1] - arr[0];
   var gm = arr[1] / arr[0];
-  
+  t
 
   var allArith = true;
   var allGeom = true;
