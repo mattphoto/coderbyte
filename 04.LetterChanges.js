@@ -3,24 +3,46 @@ function LetterChanges(str) {
   function isLetter(l) {
     return (l <= "z" && l >= "a");
   }
-
   var txt="";
+  var n;
   for (var i = 0; i < str.length; i++){
-    if (isLetter(n)){
+    n = str[i];
+    if (isLetter(str[i])){
       n = String.fromCharCode( str[i].charCodeAt(0) + 1);
-      if (  str[i] === "a" ||
-            str[i] === "e" ||
-            str[i] === "i" ||
-            str[i] === "o" ||
-            str[i] === "u" ) {
+      if (n === "z") {
+        n = "a";
+      }
+
+      if (  n === "a" ||
+            n === "e" ||
+            n === "i" ||
+            n === "o" ||
+            n === "u" ) {
         n = n.toUpperCase;
       }
     }
+    txt += n;
   }
-  return str;
+  return txt;
 
 }
 
+// mattlarsh
+
+
+function LetterChanges(str) { 
+  return str.replace(/[a-z]/ig,function(c){
+    var next = String.fromCharCode(c.charCodeAt() + 1);
+    if(/[aeiou]/g.test(next)){
+      next = next.toUpperCase(); 
+    }
+    return c == 'z' ? 'A' : c == 'Z' ? 'A' : next;
+  });    
+}
+
+
+
+// A.M.
 // match against an array
 // ifstr[i]isIn[aeiou]
 
