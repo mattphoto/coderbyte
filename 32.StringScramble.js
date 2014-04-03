@@ -20,7 +20,7 @@ function StringScramble(str1,str2) {
   return match;
 }
 
- StringScramble("coderbyte","redoc");
+
 
 
 
