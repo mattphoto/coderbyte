@@ -15,7 +15,6 @@ function StringScramble(str1,str2) {
     } else {
       return false;
     }
-    console.log(str2[i], str1[j]);
   }
   return match;
 }
