@@ -33,7 +33,7 @@ function stockPicker (arr) {
   var low;
   var dif;
   for (var i = 0; i < arr.length-1; i++) {
-    for (var j = i + 1; j < arr.length; j++) {
+    for (var j = 0; j < arr.length; j++) {
       if (arr[i] - arr[j] > dif) {
         dif = arr[i] - arr[j];
         high = arr[j];
@@ -43,6 +43,16 @@ function stockPicker (arr) {
   }
   return [high, low]
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
