@@ -1,5 +1,5 @@
 function VowelCount(str){
-   str = str.toLowerCase();
+  str = str.toLowerCase();
   var count=0
   for (var i = 0; i < str.length; i++){
     if (  str[i] === "a" ||
@@ -11,4 +11,13 @@ function VowelCount(str){
     }
   }
   return count;
+}
+
+
+
+// mattlarsh
+
+function VowelCount(str) { 
+  var vowels = str.match(/[aeiou]/g);
+  return vowels.length;
 }
