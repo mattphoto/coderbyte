@@ -1,45 +1,10 @@
-                          
-
-
-
-
-
-str = "Drivers who have experienced this test have seen a tremendous rise";
-
-console.log(strArr);
-
-
-//
-
-
-function LetterCountI(str) { 
-
-  var splits;
-  var sorts = [];
-  var strArr = [];
-    strArr = str.toLowerCase().split(" "); // array split into individual words
-      for (var i = 0; i < strArr.length; i++) {
-          sorts = (strArr[i].split("").sort()); //each word split and sorted
-          for (var i = 0; i < sorts.length; i++) {
-            console.log(letterCounter(sorts);
-          }
-
-          
-      }
-  return str; 
-  
-}
-
-LetterCountI(str);
-
-//
-
+// what a mess
 
 function letterCounter(str){
   var countLetter = 1;
-  var maxcountLetter = 0;
+  var maxcount = 0;
   for (var i = 0; i < str.length-1; i++) {
-    if (str[i] === str [i+1]) {
+    if (str[i] === str[i+1]) {
       countLetter++;
     }
     maxcount = countLetter;
@@ -49,6 +14,100 @@ function letterCounter(str){
   }
   return maxcount;
 }
+
+
+function LetterCountI(str) {
+  var sorts = [];
+  var strArr = [];
+  var sum = 0;
+  var marker = 0;
+  strArr = str.split(" "); // array split into individual words
+  for (var i = 0; i < strArr.length; i++) {
+    sorts = strArr[i].split("").sort().join(""); //each word split and sorted
+    if (letterCounter(sorts) > sum) {
+      sum = letterCounter(sorts);
+      marker = i;
+    }
+  }
+  if (sum < 2) {
+    return -1
+  } else {
+    return strArr[marker]; 
+  }
+}
+
+
+
+// mattlarsh
+
+function LetterCountI(str) { 
+  var letterMap = {};
+  var maxCount = 1;
+  var words = str.split(" ");
+  var maxWord = words[0];
+  for(var i=0,y=words.length;i<y;i++){
+    var eachWord = words[i];
+    letterMap = {};
+    for(var j=0,z=eachWord.length;j<z;j++){
+      letterMap[eachWord[j]] = letterMap[eachWord[j]] + 1 || 1;
+      if(letterMap[eachWord[j]] > maxCount){
+        maxCount = letterMap[eachWord[j]];
+        maxWord = eachWord;
+      }
+    }
+  }
+  if(maxCount > 1){
+    return maxWord; 
+  }
+  return -1;
+}
+
+
+
+
+// superdewd
+
+function LetterCountI(str) { 
+
+  var cnt = function (s) {
+    var m = 0;
+    for (var i = 0; i < s.length; i++) {
+      var c = 0;
+      for (var j = 0; j < s.length; j++) {
+        if (s[i] == s[j]) {
+          c++;
+        }
+      }
+      
+      m = Math.max(m, c);
+    }
+    
+    return m;
+  };
+  
+  var ss = str.split(' '),
+      mxs = '',
+      mxc = 0;
+  
+  for (var i = 0; i < ss.length; i++) {
+    var c = cnt(ss[i]);
+    if (c > mxc) {
+      mxc = c;
+      mxs = ss[i];
+    }
+  }
+  
+  // code goes here
+  return mxc > 1 ? mxs : -1;
+            
+}
+
+
+
+// 
+
+
+
 
 
 
@@ -69,7 +128,8 @@ function LetterCountI(str) {
      
      // Go through each character in a word
      for (var j=0; j < arr[i].length; j += 1 ) {
-       // Make each occurance of a particular letter a key in object; make value of that key hold the count of letters occurance
+       // Make each occurance of a particular letter a key in object; make value 
+        //of that key hold the count of letters occurance
        if ( stats[arr[i][j]] === undefined )  {
            stats[arr[i][j]] = 1;
        } else {

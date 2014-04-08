@@ -1,3 +1,5 @@
+// doesn't work
+
 function ArithGeo (arr) {
   var series;
   var dif = arr[1] - arr[0];
