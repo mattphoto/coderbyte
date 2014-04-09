@@ -72,8 +72,6 @@ function CountingMinutesI(str) {
 // hfkiwi
 
 function CountingMinutesI(str) { 
-
-  // code goes here  
   var times=str.split("-");
   var hours = new Array;
   var minutes = new Array;
@@ -162,4 +160,45 @@ function CountingMinutesI(str) {
   } else if(totalMins1 < totalMins2){
     return Math.abs((totalMins2 - totalMins1));  
   }
+}
+
+
+
+// am
+
+function CountingMinutesI(str) { 
+
+ var times = str.split('-');
+ var isSame = times[0][times[0].length - 2] === times[1][times[1].length - 2];
+ //console.log (isSame);
+ 
+ var first = times[0].split(':');
+ var second = times[1].split(':');
+ 
+ first[1] = first[1].slice(0, first[1].length-2);
+ second[1] = second[1].slice(0, second[1].length-2);  
+
+ var hdiff;
+ var mins;
+ 
+ if (isSame) {
+     hdiff = (1*second[0]) - (1*first[0]);
+     
+ } else {
+     hdiff = 12 - (1*first[0]) + (1*second[0]);
+ }
+ 
+ 
+ //console.log(hdiff);
+ 
+ var mdiff;
+ 
+ mdiff = (second[1]*1) - (first[1] * 1) ;
+ 
+ if ( isSame && mdiff < 0) {     hdiff += 24;   }
+ 
+ //console.log(mdiff);  
+ 
+ return ( hdiff * 60) + mdiff; 
+ 
 }
