@@ -5,6 +5,8 @@
 // if am to pm then add 12 to end
 // if am to am && start > end add 24 to end
 // if pm to pm && start > end add 24 to end
+// should have split on the hyphen
+
 
 function CountingMinutesI(str) { 
 

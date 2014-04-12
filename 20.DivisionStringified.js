@@ -1,9 +1,9 @@
+
 function DivisionStringified(num1,num2) {
-var number = Math.floor( num1 / num2 ).toString().split("");
+var number = Math.round( num1 / num2 ).toString().split("");
 var commaAdded = [];
 
   for (var i= number.length-1; i >= 0; i--) {
-    console.log(i, commaAdded.length % 4, commaAdded.join(""));
     if (commaAdded.length % 4 === 0 ){
       commaAdded.unshift(",");
     }
@@ -11,37 +11,42 @@ var commaAdded = [];
 
     console.log(i, commaAdded.length, commaAdded.join(""));
   }
-  return commaAdded.join("");
+  return commaAdded.join("").slice(0, -1); //ugly solution to the extra comma
 }
-   
-DivisionStringified(123, 1); 
 
 
 
 
 
-function DivisionStringified(num1,num2) {
-var number = Math.floor( num1 / num2 ).toString().split("");
-var commaAdded = [];
+// SUPERdewd
 
-  for (var i= number.length-1; i >= 0; i--) {
-    console.log(i, commaAdded.length, commaAdded.length % 4, commaAdded.join(""));
-    if (commaAdded.length % 4 === 0 && commaAdded !== undefined){
-      commaAdded.unshift(",");
+function DivisionStringified(num1,num2) { 
+
+  var s = Math.round(num1 / num2) + '',
+      res = '';
+  
+  for (var i = s.length - 1; i >= 0; i--) {
+    if (i != s.length - 1 && (s.length - i - 1) % 3 == 0) {
+      res = ',' + res;
     }
-    commaAdded.unshift(number[i]);
-
-    console.log(i, commaAdded.length, commaAdded.join(""));
+    
+    res = s[i] + res;
   }
-  return commaAdded.join("");
+  
+  return res; 
+
+
+
+/// MarshallOfSound
+
+function DivisionStringified(num1,num2) { 
+  return (Math.round(num1/num2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");    
 }
-   
-DivisionStringified(1234, 1); 
 
 
 
 
-
+/// AM
 
 function addComma(str) {
   var arr = str.split('');
