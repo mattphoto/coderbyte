@@ -1,4 +1,4 @@
-// this solution doesn't account for mulitple letters.
+// this solution doesn't account for duplicate letters.
 
 function StringScramble(str1,str2) { 
 

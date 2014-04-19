@@ -17,9 +17,14 @@ function ExOh(str) {
 }
 
 
-string ExOh(string str) { 
-  
-  return count(all(str), 'x') == count(all(str), 'o') ? "true" : "false"; 
-            
-}
 
+// functional with logic by AM
+
+function ExOh(str) { 
+  var arr = str.split('');
+  var xo = arr.reduce(function(acc, val){
+    return val === 'x' ? acc + 1 : acc - 1;
+      }, 0);
+  // code goes here  
+  return !xo;    
+}

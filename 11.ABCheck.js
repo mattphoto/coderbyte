@@ -13,4 +13,13 @@ function ABCheck(str) {
 }
 
 
-// git commit deleted files
+// a fancy way
+
+
+function VowelCount(str) { 
+  var vow = "aeiou";
+  var arr = str.split('');
+  return arr.reduce(function(s, v) {
+    return vow.indexOf(v) !== -1 ? s + 1 : s;
+  }, 0);    
+}
