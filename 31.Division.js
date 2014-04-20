@@ -2,7 +2,6 @@
 // 2. iterate thru to higher number until factor is greater than smaller num. or compare both num
 //  nested if statements to compare high to iterator
 
-
 function Division(num1,num2) { 
   var arr1 = [];
   var arr2 = [];
@@ -29,8 +28,8 @@ function Division(num1,num2) {
           }
       }
   }
-}
 
+}
 
 
 // marshall
