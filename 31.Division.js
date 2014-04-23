@@ -6,7 +6,7 @@
 function Division(num1,num2) { 
   var arr1 = [];
   var arr2 = [];
-  
+
   for (var i = 0; i <= num1; i++) {
     if (num1 % i === 0 ) {
       arr1.push(i);
