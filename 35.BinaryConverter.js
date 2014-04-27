@@ -1,6 +1,9 @@
 function BinaryConverter(str) { 
 
-  return str;         
+  return str; 
+
+
+          
          
 }
 
