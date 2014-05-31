@@ -3,6 +3,7 @@
 //  nested if statements to compare high to iterator
 //
 
+
 function Division(num1,num2) { 
   var arr1 = [];
   var arr2 = [];
